@@ -1,5 +1,3 @@
-import request from '@/utils/request';
-
 export function signUpApi(data) {
   return request({
     url: 'users',
