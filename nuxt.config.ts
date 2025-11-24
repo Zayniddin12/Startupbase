@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// https://nuxt.com/docs/api/configuration/nuxt-config\
+
 export default defineNuxtConfig({
   ssr: true,
 
@@ -19,36 +20,43 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/styles/tailwind.css', '~/assets/styles/main.css'],
+  css: ['@/assets/styles/tailwind.css', '@/assets/styles/main.css'],
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-gtag',
     '@element-plus/nuxt',
     '@nuxtjs/i18n',
-    //   Enable if your Yandex Metrica with real credentials
-    // [
-    //   'yandex-metrika-module-nuxt3',
-    //   {
-    //     id: 0000000,
-    //     webvisor: true,
-    //   },
-    // ],
+    'shadcn-nuxt',
+
     [
       '@pinia/nuxt',
       {
-        autoImports: [
-          // automatically imports `defineStore`
-          'defineStore', // import { defineStore } from 'pinia'
-          ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
-        ],
+        autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
       },
-      'nuxt-simple-robots',
-      'nuxt-simple-sitemap',
     ],
-    '@nuxtjs/i18n',
+
+    'nuxt-simple-robots',
+    'nuxt-simple-sitemap',
   ],
+
+  shadcn: {
+    /**
+     * Prefix for all the imported component.
+     * @default "Ui"
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * Will respect the Nuxt aliases.
+     * @link https://nuxt.com/docs/api/nuxt-config#alias
+     * @default "@/components/ui"
+     */
+    componentDir: '@/components/ui',
+  },
+
   i18n: {
     defaultLocale: 'en',
+    langDir: 'locales',
     locales: [
       { code: 'en', name: 'English', file: 'en.json' },
       { code: 'uz', name: 'Uzbek', file: 'uz.json' },
@@ -64,6 +72,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       baseURL: 'localhost',
+      public: {
+        apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL,
+      },
     },
   },
 
