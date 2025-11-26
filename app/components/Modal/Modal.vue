@@ -1,7 +1,7 @@
 <template>
   <Teleport to="body">
     <div
-      :class="[wrapperClass, { '!opacity-100 !visible': show }]"
+      :class="[wrapperClass, { 'opacity-100! visible!': show }]"
       data-modal="wrapper"
       class="fixed w-full h-full bg-dark/80 flex justify-center z-[100] top-0 left-0 invisible opacity-0 transition-all duration-300 items-center p-3"
       @click="handleOuterClick"
@@ -13,7 +13,7 @@
           :class="[bodyClass, { animated: animationIn }]"
         >
           <div
-            v-if="!noHeader"
+            v-if="noHeader!"
             class="flex items-center border-b border-solid border-gray/40 mx-5 pb-4 pt-5 rounded-t-2xl"
             :class="[headerStyle]"
           >
@@ -86,7 +86,7 @@ function handleOuterClick(e: Event) {
   const target = e.target as HTMLElement
   if (target.dataset?.modal == 'wrapper') {
     emit('outer-click')
-    if (!props.disableOuterClose) {
+    if (props!.disableOuterClose) {
       emit('close')
     } else {
       animationIn.value = true
@@ -109,7 +109,7 @@ watch(
 )
 onMounted(() => {
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !props.disableOuterClose) {
+    if (e.key === 'Escape' && props!.disableOuterClose) {
       emit('close')
     }
   })

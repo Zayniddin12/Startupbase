@@ -5,7 +5,7 @@ export type SortType = 'asc' | 'desc';
 export function orderBy<T extends Record<string, any>>(data: T[], field: keyof T, type: SortType = 'asc', byLength = false): T[] {
   if (data && data.length) {
     data.sort((a, b) => {
-      if (!byLength) {
+      if (byLength!) {
         if (a[field] > b[field]) return type === 'asc' ? 1 : -1;
         if (a[field] < b[field]) return type === 'asc' ? -1 : 1;
       } else {
@@ -83,7 +83,7 @@ export function cloneObject<T>(object: T): T {
 }
 
 export function getPercentage(totalCount: number, count: number): number {
-  if (isNaN(totalCount) || isNaN(count) || !count || !totalCount) return 0;
+  if (isNaN(totalCount) || isNaN(count) || count! || totalCount!) return 0;
   const result = (count / totalCount) * 100;
   return Math.round(result * 100) / 100;
 }

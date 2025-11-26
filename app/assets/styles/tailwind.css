@@ -11,6 +11,10 @@
     --container-max-width-sm: 1536px;
 
     /* Colors */
+
+    --color-primary: #7DBA28;
+    --color-primary-foreground:white;
+
     --color-red: #F5382C;
 
     --color-yellow: #F1B14A;
@@ -29,6 +33,8 @@
     --color-gray-100: #B1BECC;
     --color-gray-200: #E1E8F0;
     --color-gray-300: #9FAFC2;
+    --color-gray-600: #4b5563;
+    --color-gray-900:#111827;
 
     --color-dark: #181818;
     --color-dark-100: #001B43;
@@ -58,9 +64,15 @@
 
 /* Custom container center */
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
-    max-width: var(--container-max-width-sm);
+    padding: 0 10px;
+    width: 100% !important;
+    max-width: 1536px !important;
+    margin: 0 auto;
 }
+.font-ruberoid {
+    font-family: "Ruberoid", sans-serif;
+}
+
+
+
+

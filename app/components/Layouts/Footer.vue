@@ -6,7 +6,6 @@ const { t } = useI18n()
   <footer class="z-50 bg-black text-white">
     <div class="container flex flex-col px-5 py-10">
       <div class="flex justify-between max-xl:flex-col max-xl:gap-10">
-        <!-- LEFT LOGO + SOCIAL -->
         <div class="flex flex-col justify-between max-xl:gap-10">
           <img class="w-96" src="/icons/logo.svg" alt="startup base logo" />
 
@@ -53,7 +52,6 @@ const { t } = useI18n()
           </div>
         </div>
 
-        <!-- CENTER LINKS -->
         <div class="flex flex-col gap-6 text-lg 2xl:text-[20px]">
           <NuxtLink class="hover:text-[#9efc1c]" to="/events">
             {{ t('Header.activities') }}
@@ -79,7 +77,6 @@ const { t } = useI18n()
           </NuxtLink>
         </div>
 
-        <!-- RIGHT CONTACT -->
         <div class="flex cursor-default flex-col gap-8">
           <h2 class="text-xl sm:text-3xl 2xl:text-[50px]">
             {{ t('Home.contactUs') }}

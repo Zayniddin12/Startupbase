@@ -10,7 +10,7 @@
           </div>
         </div>
         <BaseButton
-          v-if="!Object.keys(store.user).length"
+          v-if="Object!.keys(store.user).length"
           id="yourElementId"
           :text="$t('login')"
           class="ml-auto max-w-[140px] w-full text-sm"
@@ -18,7 +18,7 @@
           @click="login"
         />
       </div>
-      <BaseLang class="mt-6" list-style="!w-[100px]" />
+      <BaseLang class="mt-6" list-style="w-[100px]!" />
       <ul class="mt-6">
         <li
           v-for="(item, idx) of menuStore.menu"
@@ -28,7 +28,7 @@
           <div class="flex items-center justify-between pr-4">
             <NuxtLink
               :to="'/' + item?.slug"
-              class="text-dark text-base font-medium !leading-130 transition-colors duration-300 hover:text-blue"
+              class="text-dark text-base font-medium leading-130! transition-colors duration-300 hover:text-blue"
               >{{ item.name }}
             </NuxtLink>
             <span
@@ -57,7 +57,7 @@ const activeMenuId = ref<number>()
 const route = useRoute()
 const isShown = ref(false)
 const login = () => {
-  if (!Object.keys(store.user).length) {
+  if (Object!.keys(store.user).length) {
     return $event('open-auth', 'login')
   }
 }

@@ -77,9 +77,9 @@ const Tag = props.as ?? 'p'
 
 <template>
   <component :is="Tag" :class="classes">
-    <!-- Agar innerHTML berilgan bo'lsa uni render qilamiz -->
+    <--! Agar innerHTML berilgan bo'lsa uni render qilamiz -->
     <template v-if="props.innerHTML" v-html="props.innerHTML" />
-    <!-- Aks holda slot orqali content keladi -->
+    <--! Aks holda slot orqali content keladi -->
     <template v-else>
       <slot />
     </template>

@@ -5,7 +5,6 @@
     size="small"
     @change="setLocale"
   >
-    <!-- Chap tomonda flag -->
     <template #prefix>
       <img
         v-if="current"
@@ -13,8 +12,6 @@
         class="w-5 h-5 rounded-full mr-0"
       />
     </template>
-
-    <!-- Dropdown elementlari -->
     <el-option
       v-for="l in locales"
       :key="l.code"
@@ -49,7 +46,5 @@ watch(locale, (val) => (current.value = val.toUpperCase()))
 }
 .el_select__prefix img {
   margin-right: 0 !important;
-}
-.el-select__placeholder {
 }
 </style>

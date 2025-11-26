@@ -45,8 +45,8 @@ function close() {
     <Modal
       :show="open"
       :title="$t('search')"
-      body-class="!max-w-[378px] !overflow-visible"
-      class="logOut !w-[378px]"
+      body-class="max-w-[378px]! overflow-visible!"
+      class="logOut w-[378px]!"
       title-style="logout_title"
       @close="close"
     />

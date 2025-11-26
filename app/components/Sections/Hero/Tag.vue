@@ -21,7 +21,7 @@ const showTag = props.isTag ? 'opacity-100 scale-100' : ''
   <NuxtLinkLocale :to="props.tag.href || '#!'">
     <BaseButton
       variant="clear"
-      class="text-center !w-fit bg-white/90 border-[#E5E7EA] md:p-3 max-xl:border-2 rounded-2xl xl:rounded-2xl text-black xl:shadow-md z-10 hover:z-50 xl:hover:shadow-lg transform transition-all duration-1000 ease-out cursor-pointer xl:w-full opacity-100 scale-100"
+      class="text-center w-fit! bg-white/90 border-[#E5E7EA] md:p-3 max-xl:border-2 rounded-2xl xl:rounded-2xl text-black xl:shadow-md z-10 hover:z-50 xl:hover:shadow-lg transform transition-all duration-1000 ease-out cursor-pointer xl:w-full opacity-100 scale-100"
     >
       <p
         class="font-bold text-gray-800 max-sm:text-sm max-[360px]:text-[12px] max-[320px]:text-[11px] sm:text-[18px] md:text-[24px] xl:text-[30px]"

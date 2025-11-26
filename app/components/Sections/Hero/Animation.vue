@@ -2,12 +2,9 @@
   <div ref="containerRef">
     <div>
       <div class="relative overflow-hidden">
-        <!-- Background image -->
         <div
           class="absolute left-0 top-[-50%] h-[200%] w-full bg-[url('/images/BGHero.png')] bg-contain bg-center bg-no-repeat xl:block hidden"
         />
-
-        <!-- Desktop HeroContent -->
         <SectionsHeroContent ref="containerRef" class="hidden xl:block">
           <template #content>
             <div
@@ -41,7 +38,7 @@
                   top: tag.top,
                   animationDelay: `${index * 650}ms`,
                 }"
-                class="absolute z-10 rounded-2xl border-[#7DBA28] bg-white/90 px-4 py-2 text-black opacity-0 shadow-md transition-all duration-1000 ease-out hover:z-50 hover:!scale-[1.3] hover:border hover:shadow-lg max-xl:hidden"
+                class="absolute z-10 rounded-2xl border-[#7DBA28] bg-white/90 px-4 py-2 text-black opacity-0 shadow-md transition-all duration-1000 ease-out hover:z-50 hover:scale-[1.3]! hover:border hover:shadow-lg max-xl:hidden"
                 :class="showTags ? 'scale-100 opacity-100' : ''"
               >
                 <p class="font-bold text-gray-800 xl:text-xl 2xl:text-[32px]">
@@ -52,7 +49,6 @@
           </template>
         </SectionsHeroContent>
 
-        <!-- Mobile HeroContent -->
         <SectionsHeroContent
           class="xl:hidden max-w-[1000px] mx-auto max-sm:pt-0 max-md:pt-12 max-xl:pt-32"
         >

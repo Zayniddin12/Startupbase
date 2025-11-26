@@ -47,12 +47,10 @@ const data = [
 
 <template>
   <div class="container relative z-[5] py-10 xs:px-5 md:py-20">
-    <!-- TITLE -->
-    <h2 class="text-3xl font-bold max-sm:text-center">
+    <h2 class="mb-10 text-[50px] font-semibold max-sm:text-center">
       {{ t('Header.investors') }}
     </h2>
 
-    <!-- INVESTORS GRID -->
     <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
       <CardInvestors
         v-for="investor in data.slice(0, 4)"
@@ -68,7 +66,6 @@ const data = [
       />
     </div>
 
-    <!-- NO INVESTORS -->
     <div
       v-if="data.length === 0"
       class="flex h-full items-center justify-center"
@@ -78,7 +75,6 @@ const data = [
       </p>
     </div>
 
-    <!-- SEE MORE BUTTON -->
     <div class="relative z-[3] mt-10 flex justify-center">
       <BaseButton class="w-full text-center md:w-auto">
         <p class="text-base font-medium">

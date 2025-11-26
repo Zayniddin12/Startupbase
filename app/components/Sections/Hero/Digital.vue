@@ -10,7 +10,7 @@ const visible = ref(false)
 
 function handleMouseMove(e) {
   const rect = sectionRef.value?.getBoundingClientRect()
-  if (!rect) return
+  if (rect!) return
 
   const isInside =
     e.clientX >= rect.left &&
@@ -18,7 +18,7 @@ function handleMouseMove(e) {
     e.clientY >= rect.top &&
     e.clientY <= rect.bottom
 
-  if (!isInside) {
+  if (isInside!) {
     visible.value = false
     return
   }
@@ -40,7 +40,7 @@ function handleMouseMove(e) {
     class="relative mt-12 h-[50vh] max-h-[93vh] w-full overflow-hidden xs:mt-16 sm:mt-16 md:h-screen 2xl:mt-20"
     :class="{ 'lg:cursor-none': visible }"
   >
-    <!-- Background video -->
+    <--! Background video -->
     <video
       src="/videos/Startup_V3.mp4"
       autoplay
@@ -52,7 +52,7 @@ function handleMouseMove(e) {
 
     <div class="absolute inset-0 z-10 bg-black/40" />
 
-    <!-- CONTENT -->
+    <--! CONTENT -->
     <div
       class="container absolute inset-0 z-20 flex flex-col justify-end px-5 pb-5 sm:pb-20 lg:items-center lg:justify-end"
     >
@@ -61,27 +61,27 @@ function handleMouseMove(e) {
       >
         DIGITAL STARTUP AWARDS&nbsp;
         <span class="text-[#7DBA28]">
-          <!--          <Typewriter-->
-          <!--            :words="[-->
-          <!--              'Armenia',-->
-          <!--              'Kazakhstan',-->
-          <!--              'Azerbaijan',-->
-          <!--              'Kyrgyzstan',-->
-          <!--              'Georgia',-->
-          <!--              'Tadjikistan',-->
-          <!--              'Turkmenistan',-->
-          <!--              'Mongolia',-->
-          <!--            ]"-->
-          <!--            :loop="0"-->
-          <!--            cursor="|"-->
-          <!--            :type-speed="70"-->
-          <!--            :delete-speed="50"-->
-          <!--            :delay-speed="2500"-->
-          <!--          />-->
+          <--!          <Typewriter-->
+          <--!            :words="[-->
+          <--!              'Armenia',-->
+          <--!              'Kazakhstan',-->
+          <--!              'Azerbaijan',-->
+          <--!              'Kyrgyzstan',-->
+          <--!              'Georgia',-->
+          <--!              'Tadjikistan',-->
+          <--!              'Turkmenistan',-->
+          <--!              'Mongolia',-->
+          <--!            ]"-->
+          <--!            :loop="0"-->
+          <--!            cursor="|"-->
+          <--!            :type-speed="70"-->
+          <--!            :delete-speed="50"-->
+          <--!            :delay-speed="2500"-->
+          <--!          />-->
         </span>
       </h1>
 
-      <!-- MOBILE BUTTON -->
+      <--! MOBILE BUTTON -->
       <div
         class="mt-4 self-start ps-1 xs:mt-4 lg:absolute lg:bottom-28 lg:right-5 lg:mt-0 lg:hidden"
       >
@@ -94,7 +94,7 @@ function handleMouseMove(e) {
       </div>
     </div>
 
-    <!-- FOLLOW CURSOR BUTTON -->
+    <--! FOLLOW CURSOR BUTTON -->
     <div
       class="absolute z-30 max-lg:hidden"
       style="top: 0; left: 0; width: 100%; height: 100%; cursor: none"

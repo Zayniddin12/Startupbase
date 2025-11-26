@@ -17,7 +17,6 @@ const props = defineProps<Props>()
   <div
     class="flex direction-reverse min-h-[400px] lg:min-h-[500px] cursor-pointer w-full flex-col gap-8 rounded-[20px] border bg-white p-5 md:max-w-[30%] lg:max-w-[23%]"
   >
-    <!-- PHOTO -->
     <div
       v-if="props.photo"
       class="flex items-center overflow-hidden rounded-[20px] bg-[rgb(239,239,239)]"
@@ -34,7 +33,6 @@ const props = defineProps<Props>()
       class="w-[150px] h-[150px] rounded-[20px] bg-[rgb(239,239,239)]"
     />
 
-    <!-- TEXT -->
     <div class="flex flex-col gap-5">
       <div>
         <h3 class="text-lg font-bold truncate">{{ props.title }}</h3>
@@ -43,9 +41,7 @@ const props = defineProps<Props>()
       <p class="truncate-5-lines">{{ props.text }}</p>
     </div>
 
-    <!-- TOOLTIP SECTION -->
     <div class="mt-auto flex items-end justify-between">
-      <!-- INDUSTRY TOOLTIP -->
       <el-tooltip effect="light" class="text-sm lowercase" placement="top">
         <template #content>
           <div class="flex flex-col gap-2">
@@ -59,7 +55,6 @@ const props = defineProps<Props>()
         </span>
       </el-tooltip>
 
-      <!-- STAGE TOOLTIP -->
       <el-tooltip
         class="rounded bg-slate-100 px-6 py-0.5 text-sm"
         effect="light"

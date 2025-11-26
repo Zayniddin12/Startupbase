@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white">
+  <div class="bg-white sticky top-0 left-0 z-[999]">
     <div class="container xs:pt-5 py-3 flex-center-between">
       <img
         class="max-lg:h-10 max-md:h-8"
@@ -15,7 +15,7 @@
             type="primary"
           >
             <div
-              class="flex items-center gap-1 cursor-pointer rounded-[16px] gap-x-1 hover:text-[#7DBA28] px-1.5 !text-[15px] font-semibold transition-all 2xl:px-3 lg:text-[17.5px] outline-none ring-0 text-[#676E76]"
+              class="flex items-center gap-1 cursor-pointer rounded-[16px] gap-x-1 hover:text-[#7DBA28] px-1.5 text-[15px]! font-semibold transition-all 2xl:px-3 lg:text-[17.5px] outline-none ring-0 text-[#676E76]"
             >
               {{ item.label }}
               <el-icon class="el-icon--right">
@@ -49,7 +49,7 @@
         <BaseButton
           class="w-full"
           :text="$t('Header.login')"
-          mainClass="px-3 !gap-2"
+          mainClass="px-3 gap-2!"
         >
           <template #suffix>
             <img src="/icons/enter.svg" class="rotate-90 size-6" />

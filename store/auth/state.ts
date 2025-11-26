@@ -10,7 +10,7 @@ export interface AuthState {
 }
 
 export const state = (): AuthState => ({
-  isAuth: !!getToken(),
+  isAuth: !getToken!(),
   user: getItem("user") || null,
   role: getItem("user") ? getItem("user").role : "",
   applications: {},

@@ -1,11 +1,11 @@
 <template>
   <button
-    class="py-2 px-4 relative transition-300 active:scale-95 disabled:!bg-gray-400 disabled:text-gray-300 text-20 disabled:opacity-80 disabled:hover:opacity-80 disabled:active:scale-100 disabled:!cursor-not-allowed"
+    class="py-2 px-4 relative transition-300 active:scale-95 disabled:bg-gray-400! disabled:text-gray-300 text-20 disabled:opacity-80 disabled:hover:opacity-80 disabled:active:scale-100 disabled:cursor-not-allowed!"
     :class="[
       variants[variant],
       {
-        '!cursor-progress': loading || loadingMore,
-        'disabled:!bg-gray-400': !loading && !loadingMore,
+        'cursor-progress!': loading || loadingMore,
+        'disabled:bg-gray-400!': loading! && loadingMore!,
       },
     ]"
     :disabled="loading || loadingMore || disabled"
@@ -13,7 +13,7 @@
     <span
       :class="[
         {
-          '!opacity-0': loading,
+          'opacity-0!': loading,
           'flex-center justify-center gap-1': text?.length,
           'flex-row-reverse': iconPosition === 'left',
         },
@@ -30,7 +30,7 @@
     <transition mode="out-in" name="fade">
       <span
         v-if="loading"
-        class="absolute-center z-10 !inline-block size-max loading transition-300"
+        class="absolute-center z-10 inline-block! size-max loading transition-300"
       >
         <svg
           class="animate-spin"
@@ -82,7 +82,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const variants: Record<TButtonVariants, string> = {
   primary:
-    '!rounded-full transition-300 bg-[#7DBA28] hover:bg-[#a0e53e] text-white flex-center sm:!text-base !text-md 2xl:text-xl font-bold   shadow-[0_6px_16px_rgba(125,186,40,0.3)] hover:shadow-[0_8px_22px_rgba(125,186,40,0.4)] px-4',
+    'rounded-full transition-300 bg-[#7DBA28] hover:bg-[#a0e53e] text-white flex-center sm:text-base! text-md! 2xl:text-xl font-bold   shadow-[0_6px_16px_rgba(125,186,40,0.3)] hover:shadow-[0_8px_22px_rgba(125,186,40,0.4)] px-4',
   'bg-green':
     'bg-custom text-white cursor-pointer hover:bg-custom/80  border-custom border overflow-hidden',
   langDropdown: 'bg-transparent text-white text-20 font-normal',

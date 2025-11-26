@@ -13,9 +13,8 @@ const classes = props.className ? props.className : ''
     <div class="container relative mt-6 xs:px-5 lg:mt-12 lg:py-10 lg:pb-20">
       <Card class="rounded-[16px] border-none shadow-md">
         <CardContent
-          class="flex items-center justify-between !p-0 max-md:flex-col-reverse"
+          class="flex items-center justify-between p-0! max-md:flex-col-reverse"
         >
-          <!-- LEFT TEXT AREA -->
           <div
             class="p-6 md:max-w-[450px] lg:max-w-[550px] lg:p-12 xl:max-w-[720px] 2xl:max-w-[900px]"
           >
@@ -39,7 +38,6 @@ const classes = props.className ? props.className : ''
             </NuxtLink>
           </div>
 
-          <!-- RIGHT IMAGE -->
           <img
             src="/images/CreateBigProjectWithItPark.png"
             alt="Digital Startups Program"

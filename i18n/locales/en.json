@@ -1677,5 +1677,8 @@
     "askQuestion": "Ask me any question",
     "maxFileSize": "Max file size: 10 MB",
     "allowedFileTypes": "Allowed file types:"
-  }
+  },
+  "explore_global_map_title": "Explore the Global Startup Ecosystem Map",
+  "explore_global_map_description": "The Global Startup Ecosystem Map is a crowdsourced community resource with hundreds of thousands of registered startups, unicorns, exits, coworking spaces, accelerators, influencers and organizations.",
+  "explore_more": "Explore more"
 }
