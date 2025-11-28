@@ -1,8 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config\
-
+import svgLoader from 'vite-svg-loader'
 export default defineNuxtConfig({
   ssr: true,
-
+  vite: {
+    plugins: [
+      svgLoader({
+        defaultImport: 'component', // SVG ni avtomatik component qiladi
+      }),
+    ],
+  },
   app: {
     head: {
       title: 'Nuxt3 project',

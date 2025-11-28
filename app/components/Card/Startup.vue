@@ -34,22 +34,22 @@ const handleOnClick = (id: string | number) => {
 <template>
   <div
     @click="handleOnClick(props.id)"
-    class="relative min-h-[530px] w-full cursor-pointer overflow-hidden rounded-[20px] border bg-white p-5"
+    class="relative min-h-[530px] w-full cursor-pointer overflow-hidden rounded-[20px] border border-[#e5e7eb] bg-white p-5"
   >
     <div class="z-[1] flex h-full flex-col items-center justify-end gap-8">
       <img
-        :src="config.public.baseURL + props.logo"
+        :src="props.logo"
         :alt="props.title"
-        class="h-[150px] w-auto object-contain m-auto rounded-xl"
+        class="h-[100px] w-auto object-contain m-auto rounded-xl"
         loading="lazy"
       />
 
-      <div class="text-black text-center">
-        <h3 class="font-bold text-xl line-clamp-2">
+      <div class="text-black">
+        <h3 class="font-semibold text-[22px] line-clamp-2 text-center">
           {{ props.title }}
         </h3>
 
-        <p class="text-sm mt-4 leading-5 line-clamp-6 min-h-[100px]">
+        <p class="text-lg mt-4 leading-5 line-clamp-6">
           {{ props.description }}
         </p>
       </div>

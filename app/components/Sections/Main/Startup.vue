@@ -4,8 +4,8 @@ const { t } = useI18n()
 
 <template>
   <div class="relative z-1">
-    <div class="container py-10 xs:px-5">
-      <h2 class="text-3xl font-bold max-sm:text-center mb-6">
+    <div class="container py-10">
+      <h2 class="text-[50px] leading-[56px] font-bold max-sm:text-center mb-6">
         {{ t('Home.Startups.title') }}
       </h2>
 

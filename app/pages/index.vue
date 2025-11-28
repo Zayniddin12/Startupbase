@@ -7,8 +7,10 @@
     <SectionsMainRole />
     <SectionsMainEvents />
     <SectionsMainRegInvest />
+    <SectionsMainPartners />
     <SectionsMainPrograms />
-    <!--    <SectionsMainStartup />-->
+    <SectionsMainStartup />
+    <SectionsMainNews />
   </div>
 </template>
 <script setup lang="ts"></script>
